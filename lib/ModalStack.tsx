@@ -142,6 +142,7 @@ const ModalStack = <P extends ModalfyParams>(props: Props<P>) => {
       style={[
         styles.container,
         {
+          height: 100 + openedItemsArray.length * 100,
           opacity,
           transform: [{ translateY }],
         },
@@ -154,7 +155,10 @@ const ModalStack = <P extends ModalfyParams>(props: Props<P>) => {
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
     zIndex: 0,
   },
   backdrop: {
